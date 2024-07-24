@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'content' %} 
+
+<div class="container-fluid text-center py-3 my-4" style="background-size: initial; background-color: #F6933A;">
+    <img src="{% static 'sobre_nosotros.svg' %}" class="image-fluid" alt="..." style="width: 400;">
+</div>
+
+<section class="container py-2 pb-5">
+    <div class="row py-5">
+
+        <!--Primera-->
+        <div class="row py-3">
+                <div class="col-md-6 align-content-center" style="font-family: Courier Prime">
+
+                        <h1 style="color: #743A32; font-weight: 600;">¡Bienvenidos a Only Purin!</h1>
+                        <p>
+                            Yuki y Hana, dos amigas japonesas, llegaron a Chile buscando nuevas aventuras. Fascinadas por la cultura kawaii,
+                             decidieron fusionar sus raíces con los sabores locales. Así nació "Only Purin", un emprendimiento de flanes 
+                             artesanales que combina la delicadeza japonesa con ingredientes chilenos. Con colores vibrantes y decoraciones
+                              adorables, sus flanes se convirtieron en un éxito inmediato. Cada creación es un pequeño homenaje a su 
+                              amistad y a la fusión cultural que encontraron en su nueva casa. Su lema: "Dulzura que une mundos".
+                        </p>
+                </div>
+                <div class="col-md-6 align-content-center">
+                            <img src="{% static 'chinas.jpg' %}" width="600" style="border-radius: 60px; max-width: 100%; height: auto;" >
+                </div> 
+        </div>
+
+         <!--Segunda-->
+        <div class="row py-5" style="font-family: Courier Prime">
+
+                <div class="col-md-6 align-content-center">
+                        <img src="{% static 'flan.jpg' %}" width="600" style="border-radius: 60px; max-width: 100%; height: auto;" >
+                </div>
+
+                <div class="col-md-6 align-content-center">
+                        <h2 style="color: #743A32; font-weight: 600;">Nuestros Flanes</h2>
+                        <p>
+                            Cada flan que elaboramos es una obra de amor, hecho con ingredientes nacionales de la más alta calidad y 
+                            siguiendo recetas que han sido perfeccionadas con el tiempo, fusionados con tecnicas de repostería japonesas.
+                            Nos enorgullece ofrecer una variedad de sabores que van desde los clásicos, como el flan de vainilla y caramelo, hasta innovaciones únicas
+                            que sorprenden y deleitan a nuestros clientes más aventureros.
+                        </p>
+                </div>  
+        </div>
+
+        <!--Tercero-->  
+        <div class="row">
+
+                <div class="col-md-6 align-content-center">
+                        
+                        <div class="py-5 my-5" style="font-family: Courier Prime">
+                        
+                        <h2 style="color: #743A32; font-weight: 600;">Nuestra Historia</h2>
+                        <p class="pb-5 mb-5">
+                          <!--  Only Purin nació de una simple idea: traer de vuelta el sabor auténtico del flan 
+                            artesanal a las mesas de nuestros clientes. Creemos que un buen postre puede crear momentos 
+                            inolvidables, y es esa creencia la que nos impulsa a mejorar continuamente y a poner nuestro corazón 
+                            en cada flan que hacemos. --> 
+                            Yuki y Hana, dos amigas japonesas, llegaron a Chile buscando nuevas aventuras. Fascinadas por
+                            la cultura kawaii, decidieron fusionar sus raíces con los sabores locales. Así nació "Only Purin",
+                            un emprendimiento de flanes artesanales que combina la delicadeza japonesa con ingredientes chilenos. 
+                            Con colores vibrantes y decoraciones adorables, sus flanes se convirtieron en un éxito inmediato. 
+                            Cada creación es un pequeño homenaje a su amistad y a la fusión cultural que encontraron en su 
+                            nueva casa. Su lema: "Dulzura que une mundos".
+                    
+                        </p>
+
+                        <h2 class="pt-5 mt-5" style="color: #743A32; font-weight: 600;">Nuestra Filosofía</h2>
+
+                        <p>
+                            Para nosotros, hacer flanes es más que una tarea, es un arte. Valoramos la importancia de los 
+                            detalles, desde la selección de los ingredientes hasta la presentación final de cada postre. 
+                            Nuestra intención es que cada cliente sienta el cuidado y la dedicación con los que elaboramos
+                            nuestros productos, y que disfrute de un flan que no solo satisface, sino que también crea una 
+                            experiencia memorable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-end my-5">
+                            <img src="{% static 'cocina.jpg' %}" width="500" style="border-radius: 70px; max-width: 100%; height: auto;">
+                </div>               
+        </div>
+            
+        <!--Cuarta-->
+        <div class="row">             
+                <div class="col-md-6 align-content-center">
+
+                    <img src="{% static 'flanmuestra.jpg' %}" width="600" style="border-radius: 60px; max-width: 100%; height: auto;">
+                </div>
+
+                <div class="col-md-6 align-content-center" style="font-family: Courier Prime">
+                            <h2 style="color: #743A32; font-weight: 600;" class="pt-5">Descubre Nuestros Flanes</h2>
+                                <p>
+                                        Te invitamos a probar nuestros flanes y a descubrir por qué Only Purin es sinónimo de calidad, 
+                                        tradición y amor por el buen postre. Ya sea para una ocasión especial o simplemente para darte 
+                                        un gusto, nuestros flanes son la elección perfecta para cualquier momento.
+                                </p>
+
+                                <p>
+                                        Gracias por ser parte de nuestra historia y por permitirnos ser parte de la suya.
+                                        ¡Esperamos que disfruten cada bocado tanto como nosotros disfrutamos creándolo!
+                                </p>
+                </div>
+                           
+        </div>     
+                 
+
+    
+    </div>      
+</section>
+
+<div class="container-fluid py-5 text-center" style="background: #F6933A;">
+    <div class="row">
+        <div class="col-3 d-none d-sm-block">
+            <img src="{% static 'rayas.svg' %}" width="200">
+        </div>
+
+        <div class="col-12 col-md-6 justify-content-center">
+            <img src="{% static 'comunidad.svg' %}" class="py-5">
+            <p class="text-light align-content-center" style="font-family: 'Courier Prime';">
+                Nos encanta conectar con nuestros clientes y <br>
+                escuchar sus historias y sugerencias. Creemos <br>
+                que la relación con nuestros clientes es <br>
+                fundamental para mejorar y seguir creciendo. <br>
+                Por eso, siempre estamos abiertos a sus <br>
+                opiniones y nos esforzamos por hacer de cada <br>
+                interacción algo especial y cercano.
+            </p>
+        </div>
+
+        <div class="col-3 d-none d-sm-block">
+            <img src="{% static 'rayasd.svg' %}" width="200" class="img-fluid">
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

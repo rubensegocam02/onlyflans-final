@@ -1,0 +1,116 @@
+
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+  <div class="container-fluid justify-content-start">
+      <a class="navbar-brand"> <img src="{% static 'donflan.svg' %}" alt="icon" style= "width: 80px; padding-left: 20px;"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav align-content-center">
+          <li class="nav-item align-content-center">
+            <a class="nav-link btn btn-light" aria-current="page" href="{% url 'indice' %}">Inicio</a>
+          </li>
+          <li class="nav-item align-content-center">
+            <a class="nav-link btn btn-light" href="{% url 'producto' %}">Productos</a>
+          </li>
+          <li class="nav-item align-content-center">
+            <a class="nav-link btn btn-light" href="{% url 'acerca' %}">Acerca</a>
+          </li>
+          <li class="nav-item align-content-center">
+            <a class="nav-link btn btn-light" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+          {% if not user.is_authenticated %}
+          <li class="nav-item d-md-block d-lg-none">
+            <a class="nav-link btn btn-secondary btn-lg" href= "{% url 'login' %}">
+              Iniciar Sesión
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if user.is_authenticated %}
+          <li class="nav-item py-2 d-md-block d-lg-none">
+            <a class="nav-link btn btn-light" href= "{% url 'user' %}">
+              Productos exclusivos
+            </a>
+          </li>
+          <li class="nav-item d-md-block d-lg-none text-center">
+            <button type="button" class="btn btn-outline-danger " href="{% url 'logout' %}">Cerrar Sesión</button>
+          </li>
+          {% endif %}
+      </div>
+  </div>
+  <div class="container-fluid justify-content-end">
+            <a class="navbar-brand d-none d-lg-block" href="{% url 'carrito' %}"> 
+              <img src="{% static 'carrito.svg' %}" alt="icon" class="float-end mx-5 pt-1" width="50px">
+            </a>
+          <div class="btn-group pe-4 d-none d-lg-block">
+            <a class="dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="{% static 'cliente.svg' %}" alt="icon" class="float-end" width="45px">
+            </a>
+          
+            <ul class="dropdown-menu dropdown-menu-end">
+              {% if not user.is_authenticated %}
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link btn btn-light" href= "{% url 'login' %}">
+              Iniciar Sesión
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if user.is_authenticated %}
+          <li class="nav-item py-2">
+            <a class="nav-link btn btn-light" href= "{% url 'user' %}">
+              Productos exclusivos
+            </a>
+          </li>
+          <li class="nav-item py-2 text-center">
+            <a class="nav-link btn btn-light" href= "{% url 'logout' %}">
+              Cerrar Sesión
+            </a>
+          </li>
+          {% endif %}
+            </ul>
+          </div>
+  </div>
+  </div>
+</nav>
+          <!--Botones de inicio/cierre sesión
+
+
+          {% if not user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link btn btn-secondary btn-lg" href= "{% url 'login' %}">
+              Iniciar Sesión
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link btn btn-secondary text-dark" href= "{% url 'logout' %}">
+              Cerrar Sesión
+            </a>
+          </li>
+          {% endif %}
+          __________________________________
+        </ul>
+        <div class="container-fluid">
+          <ul class="navbar-nav d-flex">
+          <li class="nav-item container-fluid">
+            <a class="navbar-brand" href="{% url 'user' %}"> 
+              <img src="{% static 'cliente.svg' %}" alt="icon" class="float-end" width="45px">
+            </a>
+            <a class="navbar-brand" href="{% url 'carrito' %}"> 
+              <img src="{% static 'carrito.svg' %}" alt="icon" class="float-end mx-5 pt-1" width="45px">
+            </a>
+          </li>
+          </ul>
+        </div>
+        </ul>
+      </div>
+    </div>  -->
+ 
+
+  

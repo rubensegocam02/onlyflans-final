@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% block 'content' %}
+
+
+<!--aqui va el banner ¿Cómo funciona el reembolso?-->
+<div class="container text-start p-5" style="font-family: Courier Prime;"> 
+
+    <h2 class="text-center py-5">¡En Only Purin, queremos que estés 100% satisfecho con nuestros flanes artesanales! Si por alguna razón no estás completamente feliz 
+        con tu compra, te ofrecemos un reembolso bajo las siguientes condiciones: </h2>
+
+    <h3 class="py-5 text-center">Condiciones para el Reembolso:</h3>
+    <h3>Producto sin abrir:</h3>
+    <p>El flan debe estar en su empaque original y sin abrir.</p>
+    <h3 class="pt-5">Periodo de Solicitud:</h3>
+    <p>La solicitud de reembolso debe realizarse dentro de los 7 días posteriores a la compra.</p>
+    <h3 class="pt-5">Comprobante de Compra:</h3>
+    <p>Debes presentar el recibo o comprobante de compra.
+        Excepciones:
+        No se otorgarán reembolsos si el producto ha sido abierto o consumido parcialmente.
+        No se otorgarán reembolsos si el producto ha sido dañado por mal manejo del cliente.
+        No se aceptarán solicitudes de reembolso después de los 7 días de la compra. 
+    </p>
+    <h3 class="py-5">Proceso de Reembolso:</h3>
+        <h4>Iniciar Solicitud:</h4>
+        <p> Puedes enviar un correo electrónico a contacto@onlypurin.cl, un mensaje al Whatsapp +569 36985214 o llenar un <a href="{% url 'contacto' %}" class="bg-warning text-white text-decoration-none">formulario</a> 
+            para iniciar tu solicitud de reembolso.
+            Debes incluir una copia del recibo y una breve explicación del motivo del reembolso.
+        </p>
+        <h4>Revisión:</h4>
+        <p>Revisaremos tu solicitud y, si es necesario, te pediremos que devuelvas el producto.</p>
+        <h4>Aprobación:</h4>
+        <p>Si tu solicitud es aprobada, procesaremos el reembolso en un plazo de 5 días hábiles.
+            El reembolso se realizará mediante el mismo método de pago que utilizaste para la compra.</p>
+        <h4>Costos de Envío:</h4>
+        <p>Si necesitas devolver el producto, el costo de envío corre por tu cuenta, a menos que el flan esté defectuoso o hayamos cometido un error en tu pedido.</p>
+        <h4>Información adicional</h4>
+            Si tienes alguna otra pregunta sobre nuestra política de reembolso, o sobre otro tema, no dudes en contactarnos por los medios ya antes mencionados.
+
+            
+
+
+
+</div>
+{% endblock %}

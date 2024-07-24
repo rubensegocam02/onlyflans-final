@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'content' %}
+
+
+<div class="container-fluid pt-5 align-content text-center" style="font-family: Courier Prime;" >
+       
+    <div class="py-5">
+        <span style="font-size: 26px; font-weight: 700; color: #F6933A;">Primero</span> 
+        <p>Debes ir a la barra horizontal de arriba y presionar nuestro apartado de "productos".</p>
+        <div class=""><img src="{% static 'paso01.png' %}" alt="Primer paso de compra" class="img-fluid"></div>
+    </div>
+    <div class="py-5">
+        <span style="font-size: 26px; font-weight: 700; color: #F6933A;">Segundo</span> 
+        <p>Una vez dentro, elige cualquiera de nuestros flanes y presiona en el boton "Agregar al carrito".</p>
+        <div class=""><img src="{% static 'paso02.png' %}" alt="Primer paso de compra" class="img-fluid"></div>
+    </div>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'content' %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="h-100 p-5 text-white rounded-3"  style="font-family: 'Courier Prime';background: #F6933A;">
+                <h2>
+                    Bienvenido {{ user.get_username }}
+                </h2>
+                <h5>
+                    Tenemos una lista de productos exclusivos para ti. ¿Quieres conocer más?
+                </h5>
+                <a href="{% url 'contacto' %}" class="btn btn-outline-light" style="background:#743A32">
+                    Contáctanos
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid text-center py-3 my-4" style="background-size: initial; background-color: #743A32;">
+    <img src="{% static 'premium.svg' %}" class="image" alt="..." style="width: 400;">
+</div>
+    
+<div class="container text-center p-3" style="font-family: 'Courier Prime'; font-size: 20;">
+    <p> ¡Bienvenido a nuestra sección Premium!<br><br>
+        Aquí encontrarás productos exclusivos seleccionados  <br>
+        especialmente para nuestros miembros. Disfruta de lo mejor <br>
+        en calidad y diseño, disponible solo para ti.</p>
+</div>
+
+
+<section class="container my-5">
+  <div class="row">
+        {% for flan in private_flans %}
+        <div class="col-12 col-lg-4">
+          <div class="card border-light mb-4" style="font-family: 'Courier Prime'; background-color: #fff8e6;">
+              <img src="{{ flan.image_url }}" class="card-img-top imagen-fluid" alt="..." style="width:auto ; height: 300;">
+              <div class="card-body content-center">
+                  <p class="card-title" style="font-weight: 700; font-size: 31;">
+                      {{ flan.name }}
+                  </p>
+                  <p class="card-text" style="font-weight: 300; font-size: 13;">
+                      {{ flan.description }}
+                  </p>
+                  <div class="row align-items-center">
+                  <div class="col-lg-4 justify-content-start">
+                  <h3 style="font-weight: 700;"> $
+                      {{flan.price}}
+                  </h3>
+                  </div>
+                  <div class="col-8 d-none d-lg-flex justify-content-end">
+                      <button class="btn text-light d-flex justify-content-end " style="background-color: #F6933A; font-size: 17; font-weight: 500;" type="button">Agregar al carrito</button>
+                  </div>
+                  <div class="col-8 d-flex d-lg-none justify-content-start">
+                    <button class="btn text-light " style="background-color: #F6933A; font-size: 17; font-weight: 500;" type="button">Agregar al carrito</button>
+                </div>
+              </div>
+              </div>
+          </div>
+      </div>
+        {% endfor %}
+  </div>
+</section>
+
+<div class="container">
+    <h3 style="font-family: Courier Prime";  class="text-center py-5">Recuerda que puedes tener acceso a nuestros productos premium, además de descuentos exclusivos para clientes frecuentes, registrandote <a href="{% url 'user' %}" class="bg-warning text-white text-decoration-none">acá.</a> </h3> <!--En el "acá" se le puede poner un link para el registro-->
+</div>
+
+{% endblock %}

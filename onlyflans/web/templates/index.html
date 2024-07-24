@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+{% load static %}
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'banner01.webp' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'banner02.svg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'banner03.webp' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<!--Tarjetas-->
+
+<div class="container-fluid text-center py-3 my-5" style="background-size: initial; background-color: #F6933A;">
+
+  <img src="{% static 'favoritos.svg' %}" class="imagen-fluid" alt="..." width="400" height=auto >
+
+</div>
+
+<section class="container my-5">
+  <div class="row">
+        {% for flan in flanes %}
+        <div class="col-12 col-lg-4">
+          <div class="card border-light mb-4" style="font-family: 'Courier Prime'; background-color: #fff8e6;">
+              <img src="{{ flan.image_url }}" class="card-img-top imagen-fluid" alt="..." style="width:auto ; height: 300;">
+              <div class="card-body content-center">
+                  <p class="card-title" style="font-weight: 700; font-size: 31;">
+                      {{ flan.name }}
+                  </p>
+                  <p class="card-text" style="font-weight: 300; font-size: 13;">
+                      {{ flan.description }}
+                  </p>
+                  <div class="row align-items-center">
+                  <div class="col-lg-4 justify-content-start">
+                  <h3 style="font-weight: 700;"> $
+                      {{flan.price}}
+                  </h3>
+                  </div>
+                  <div class="col-8 d-none d-lg-flex justify-content-end">
+                      <button class="btn text-light d-flex justify-content-end " style="background-color: #F6933A; font-size: 17; font-weight: 500;" type="button">Agregar al carrito</button>
+                  </div>
+                  <div class="col-8 d-flex d-lg-none justify-content-sta">
+                    <button class="btn text-light " style="background-color: #F6933A; font-size: 17; font-weight: 500;" type="button">Agregar al carrito</button>
+                </div>
+              </div>
+              </div>
+          </div>
+      </div>
+        {% endfor %}
+  </div>
+</section>
+
+
+{% endblock %}
